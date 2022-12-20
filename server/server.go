@@ -47,7 +47,6 @@ func (s *GreeterServer) SayRecord(stream pb.Greeter_SayRecordServer) error {
 		}
 		log.Printf("resp: %v", resp)
 	}
-	return nil
 }
 
 func (s *GreeterServer) SayRoute(stream pb.Greeter_SayRouteServer) error {
@@ -65,7 +64,6 @@ func (s *GreeterServer) SayRoute(stream pb.Greeter_SayRouteServer) error {
 
 		log.Printf("resp: %v", resp)
 	}
-	return nil
 }
 
 func main() {
