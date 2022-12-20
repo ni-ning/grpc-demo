@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+// 实际测试这里的 proto 最终决定 package proto
+option go_package = "grpc-demo/proto";
+
+// 目前来看，注释这行不影响
+// package proto;
+
+service Greeter {
+    rpc SayHello(HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
+}
